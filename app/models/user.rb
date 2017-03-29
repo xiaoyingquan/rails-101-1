@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :groups
   has_many :posts
+  has_many :group_relationships
+  hes_many :participatrd_groups, :through => :group_relationships, :source => :group
 end
